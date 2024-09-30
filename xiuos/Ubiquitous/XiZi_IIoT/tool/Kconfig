@@ -1,0 +1,5 @@
+menu "Tool feature"
+
+    source "$KERNEL_DIR/tool/bootloader/Kconfig"
+
+endmenu

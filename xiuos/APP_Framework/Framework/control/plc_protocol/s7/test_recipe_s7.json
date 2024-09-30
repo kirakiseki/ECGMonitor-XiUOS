@@ -1,0 +1,88 @@
+{
+    "device_id": 1,
+    "device_name": "demo",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.2",
+        "local_ip": "192.168.250.233",
+		"gateway": "192.168.250.252",
+        "netmask": "255.255.255.0",
+        "port": 102
+    },
+	"protocol_type": 1,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "浮点数",
+            "value_type": 9,
+            "area": "DB",
+            "wordlen": "Real",
+            "db_number": 18,
+            "start": 18,
+            "amount": 1
+        },
+        {
+            "value_name": "整型1",
+            "value_type": 3,
+            "area": "M",
+            "wordlen": "WORD",
+            "db_number": 1,
+            "start": 100,
+            "amount": 1
+        },
+        {
+            "value_name": "整型2",
+            "value_type": 3,
+            "area": "M",
+            "wordlen": "WORD",
+            "db_number": 1,
+            "start": 102,
+            "amount": 1
+        },
+		{
+            "value_name": "布尔1",
+            "value_type": 1,
+            "area": "Q",
+            "wordlen": "Bit",
+            "db_number": 1,
+            "start": 1,
+            "amount": 1
+        },
+		{
+            "value_name": "布尔2",
+            "value_type": 1,
+            "area": "Q",
+            "wordlen": "Bit",
+            "db_number": 1,
+            "start": 2,
+            "amount": 1
+        },
+		{
+            "value_name": "布尔3",
+            "value_type": 1,
+            "area": "Q",
+            "wordlen": "Bit",
+            "db_number": 1,
+            "start": 3,
+            "amount": 1
+        },
+		{
+            "value_name": "布尔4",
+            "value_type": 1,
+            "area": "Q",
+            "wordlen": "Bit",
+            "db_number": 1,
+            "start": 4,
+            "amount": 1
+        },
+		{
+            "value_name": "整型3",
+            "value_type": 3,
+            "area": "DB",
+            "wordlen": "Word",
+            "db_number": 18,
+            "start": 2,
+            "amount": 1
+        }
+    ]
+}

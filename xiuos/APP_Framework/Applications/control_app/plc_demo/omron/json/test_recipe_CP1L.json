@@ -1,0 +1,52 @@
+{
+    "device_id": 1,
+    "device_name": "CP1L",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.31",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.255.0",
+        "port": 9600
+    },
+    "protocol_type": 5,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "启动",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 100,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "停止",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 100,
+            "bit_address": 1,
+            "data_length": 1
+        },
+        {
+            "value_name": "转速",
+            "value_type": 3,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 101,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "产量",
+            "value_type": 3,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 102,
+            "bit_address": 0,
+            "data_length": 1
+        }
+    ]
+}

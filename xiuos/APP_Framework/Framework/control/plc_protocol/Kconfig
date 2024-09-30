@@ -1,0 +1,29 @@
+config CONTROL_PROTOCOL_FINS
+        bool "Using fins control protocol"
+        default n
+        select CONTROL_USING_SOCKET
+if CONTROL_PROTOCOL_FINS
+        source "$APP_DIR/Framework/control/plc_protocol/fins/Kconfig"
+endif
+
+config CONTROL_PROTOCOL_MELSEC
+        bool "Using melsec control protocol"
+        default n
+if CONTROL_PROTOCOL_MELSEC
+        source "$APP_DIR/Framework/control/plc_protocol/melsec/Kconfig"
+endif
+
+config CONTROL_PROTOCOL_OPCUA
+        bool "Using opcua control protocol"
+        default n
+if CONTROL_PROTOCOL_OPCUA
+        source "$APP_DIR/Framework/control/plc_protocol/opcua/Kconfig"
+endif
+
+config CONTROL_PROTOCOL_S7
+        bool "Using s7 control protocol"
+        default n
+        select CONTROL_USING_SOCKET
+if CONTROL_PROTOCOL_S7
+        source "$APP_DIR/Framework/control/plc_protocol/s7/Kconfig"
+endif

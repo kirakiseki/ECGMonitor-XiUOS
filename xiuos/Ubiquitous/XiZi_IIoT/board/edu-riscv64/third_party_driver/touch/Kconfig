@@ -1,0 +1,17 @@
+if BSP_USING_TOUCH
+    config TOUCH_BUS_NAME
+        string "touch bus name"
+        default "touch"
+    config TOUCH_DRV_NAME
+        string "touch bus driver name"
+        default "touch_drv"
+    config TOUCH_DEVICE_NAME
+        string "touch bus device name"
+        default "touch_dev" 
+    config BSP_TOUCH_TP_INT
+        int "touch int pin"
+        default 30
+    config FPIOA_TOUCH_TP_INT
+        int "fpioa touch int pin"
+        default 30
+endif

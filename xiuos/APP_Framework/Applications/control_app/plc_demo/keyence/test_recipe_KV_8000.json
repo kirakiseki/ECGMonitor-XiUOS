@@ -1,0 +1,37 @@
+{
+    "device_id": 1,
+    "device_name": "GJ2",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.40",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.255.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "ZF0",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 0,
+            "quantity": 1
+        },
+        {
+            "value_name": "ZF1",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 1,
+            "quantity": 1
+        },
+        {
+            "value_name": "ZF2",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 2,
+            "quantity": 1
+        }
+    ]
+}

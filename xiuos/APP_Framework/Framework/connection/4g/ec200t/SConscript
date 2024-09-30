@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_EC200T']):
+    src += ['ec200t.c']
+group = DefineGroup('connection 4g ec200t', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

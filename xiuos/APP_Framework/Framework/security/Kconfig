@@ -1,0 +1,34 @@
+menu "Security"
+
+menuconfig CRYPTO
+    bool "using crypto"
+    default n
+    select TRANSFORM_LAYER_ATTRIUBUTE
+if CRYPTO
+    menuconfig CRYPTO_SM3
+        bool "using sm3"
+        default n
+
+    menuconfig CRYPTO_SM4
+        bool "using sm4"
+        default n
+
+    menuconfig CRYPTO_SM9
+        select CRYPTO_SM3
+        select CRYPTO_SM4
+        bool "using sm9"
+
+        default n
+endif
+
+menuconfig MBEDTLS
+    bool "using mbedtls"
+    default n
+    select MBEDTLS_ENABLE
+if MBEDTLS
+    menuconfig ENABLE_MBEDTLS_TEST
+        bool "enable test"
+        default n
+endif
+
+endmenu

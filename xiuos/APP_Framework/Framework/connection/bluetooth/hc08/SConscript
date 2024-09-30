@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_HC08']):
+    src += ['hc08.c']
+group = DefineGroup('connection bluetooth hc08', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

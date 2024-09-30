@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_HFA21_WIFI']):
+    src += ['hfa21_wifi.c']
+group = DefineGroup('connection wifi hfa21', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

@@ -1,0 +1,331 @@
+{
+    "device_id": 769,
+    "device_name": "S01",
+    "communication_type": 1,
+    "serial_config": {
+         "station": 1,
+        "baud_rate": 9600,
+        "data_bits": 7,
+        "stop_bits": 1,
+        "check_mode": 3
+    },
+    "protocol_type": 9,
+    "read_period": 1000,
+    "read_item_list": [
+        {
+            "value_name": "启动",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "0",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "停止",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "1",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "使能",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "2",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "回零",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "3",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "急停",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "4",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "正限位",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "5",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "负限位",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "6",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "自动运行中",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "20",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "故障",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "21",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "待机",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "22",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "手动模式",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "23",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "自动模式",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "24",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "运行方向",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "25",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "复位",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "26",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "备用1",
+            "value_type": 1,
+            "device_code": "M",
+            "head_device_number_string": "27",
+            "device_points_count": 1,
+            "command_type": 0,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "产量",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "0",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型1",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "1",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型2",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "2",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型3",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "3",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型4",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "4",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型5",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "5",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型6",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "50",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型7",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "51",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型8",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "52",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "整型9",
+            "value_type": 3,
+            "device_code": "D",
+            "head_device_number_string": "53",
+            "device_points_count": 1,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "速度",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "200",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "加速度",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "202",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "减速度",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "204",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "起始位置",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "206",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "终点位置",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "208",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "张力值",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "300",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "浮点型1",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "302",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "浮点型2",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "304",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "浮点型3",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "306",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        },
+        {
+            "value_name": "浮点型4",
+            "value_type": 9,
+            "device_code": "D",
+            "head_device_number_string": "308",
+            "device_points_count": 2,
+            "command_type": 1,
+            "monitoring_timer": 100
+        }
+    ]
+}

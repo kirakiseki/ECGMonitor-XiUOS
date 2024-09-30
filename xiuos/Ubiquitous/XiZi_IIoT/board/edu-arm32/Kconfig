@@ -1,0 +1,43 @@
+mainmenu "XiZi_IIoT Project Configuration"
+
+config BSP_DIR
+    string
+    option env="BSP_ROOT"
+    default "."
+
+config KERNEL_DIR
+    string
+    option env="KERNEL_ROOT"
+    default "../.."
+
+config BOARD_EDU_ARM32_EVB
+    bool
+    select ARCH_ARM
+    default y
+
+source "$KERNEL_DIR/arch/Kconfig"
+
+menu "edu-arm32 feature"
+    source "$BSP_DIR/third_party_driver/Kconfig"
+    
+    menu "config default board resources"
+        menu "config board app name"
+            config BOARD_APP_NAME
+                string "config board app name"
+                default "/XiUOS_edu_arm32_app.bin"
+        endmenu
+    endmenu
+
+    config MOUNT_SDCARD
+        bool
+        default n
+    config MOUNT_USB
+        bool
+        default n
+endmenu
+
+menu "Hardware feature"
+source "$KERNEL_DIR/resources/Kconfig"
+endmenu
+
+source "$KERNEL_DIR/Kconfig"

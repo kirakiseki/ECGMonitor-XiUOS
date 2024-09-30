@@ -1,0 +1,73 @@
+{
+    "device_id": 1,
+    "device_name": "GE_CPE100_TCP",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.28",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.254.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 2000,
+    "read_item_list": [
+        {
+            "value_name": "Q001",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 0,
+            "quantity": 1
+        },
+        {
+            "value_name": "Q010",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":9,
+            "quantity": 1
+        },
+        {
+            "value_name": "Q066",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 65,
+            "quantity": 1
+        },
+        {
+            "value_name": "Q100",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":99,
+            "quantity": 1
+        },
+        {
+            "value_name": "R11",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 10,
+            "quantity": 1
+        },
+        {
+            "value_name": "R12",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 11,
+            "quantity": 2
+        },
+        {
+            "value_name": "R14",
+            "value_type": 8,
+            "function_code": 3,
+            "start_address": 13,
+            "quantity": 4
+        },
+        {
+            "value_name": "R18",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 17,
+            "quantity": 2
+        }
+        
+    ]
+}

@@ -1,0 +1,17 @@
+bsp*/
+lib*/
+Makefile
+*.elf
+*orig
+*.bak
+*.objdump
+.settings
+obj
+*.map
+generated_app.sh
+flash_programmer.sh
+*.flash
+*.jic
+*.hex
+mem_init
+system.mk

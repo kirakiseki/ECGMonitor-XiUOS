@@ -1,0 +1,19 @@
+import os
+Import('RTT_ROOT')
+from building import *
+SOURCES = []
+if GetDepend(['CONNECTION_ADAPTER_NB']):
+    SOURCES = ['adapter_nbiot.c'] + SOURCES
+objs = []
+cwd = GetCurrentDir()
+path =  [cwd]
+group = DefineGroup('nb', SOURCES, depend = [], CPPPATH = [cwd])
+objs =  objs + group
+list = os.listdir(cwd)
+
+for d in list:
+    path = os.path.join(cwd, d)
+    if os.path.isfile(os.path.join(path, 'SConscript')):
+        objs = objs + SConscript(os.path.join(path, 'SConscript'))
+
+Return('objs')

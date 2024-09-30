@@ -1,0 +1,331 @@
+{
+    "device_id": 769,
+    "device_name": "S01",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.22",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.254.0",
+        "port": 9600
+    },
+    "protocol_type": 5,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "启动",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 0,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "停止",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 0,
+            "bit_address": 1,
+            "data_length": 1
+        },
+        {
+            "value_name": "使能",
+            "value_type": 1,
+            "area_char": "H",
+            "data_type": 0,
+            "start_address": 0,
+            "bit_address": 2,
+            "data_length": 1
+        },
+        {
+            "value_name": "回零",
+            "value_type": 1,
+            "area_char": "D",
+            "data_type": 0,
+            "start_address": 0,
+            "bit_address": 3,
+            "data_length": 1
+        },
+        {
+            "value_name": "急停",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 0,
+            "bit_address": 4,
+            "data_length": 1
+        },
+        {
+            "value_name": "正限位",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 10,
+            "bit_address": 11,
+            "data_length": 1
+        },
+        {
+            "value_name": "负限位",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 10,
+            "bit_address": 12,
+            "data_length": 1
+        },
+        {
+            "value_name": "自动运行中",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 200,
+            "bit_address": 5,
+            "data_length": 1
+        },
+        {
+            "value_name": "故障",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 200,
+            "bit_address": 6,
+            "data_length": 1
+        },
+        {
+            "value_name": "待机",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 200,
+            "bit_address": 7,
+            "data_length": 1
+        },
+        {
+            "value_name": "手动模式",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 300,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "自动模式",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 300,
+            "bit_address": 1,
+            "data_length": 1
+        },
+        {
+            "value_name": "运行方向",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 300,
+            "bit_address": 2,
+            "data_length": 1
+        },
+        {
+            "value_name": "复位",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 400,
+            "bit_address": 3,
+            "data_length": 1
+        },
+        {
+            "value_name": "备用1",
+            "value_type": 1,
+            "area_char": "W",
+            "data_type": 0,
+            "start_address": 400,
+            "bit_address": 4,
+            "data_length": 1
+        },
+        {
+            "value_name": "产量",
+            "value_type": 3,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 10,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型1",
+            "value_type": 3,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 11,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型2",
+            "value_type": 3,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 20,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型3",
+            "value_type": 3,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 100,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型4",
+            "value_type": 3,
+            "area_char": "W",
+            "data_type": 1,
+            "start_address": 100,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型5",
+            "value_type": 3,
+            "area_char": "W",
+            "data_type": 1,
+            "start_address": 101,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型6",
+            "value_type": 3,
+            "area_char": "W",
+            "data_type": 1,
+            "start_address": 110,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型7",
+            "value_type": 3,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 10,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型8",
+            "value_type": 3,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 20,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "整型9",
+            "value_type": 3,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 21,
+            "bit_address": 0,
+            "data_length": 1
+        },
+        {
+            "value_name": "速度",
+            "value_type": 9,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 2000,
+            "bit_address": 0,
+            "data_length": 2
+        },
+        {
+            "value_name": "加速度",
+            "value_type": 9,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 2002,
+            "bit_address": 0,
+            "data_length": 2
+        },
+        {
+            "value_name": "减速度",
+            "value_type": 9,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 2004,
+            "bit_address": 0,
+            "data_length": 2
+        },
+        {
+            "value_name": "起始位置",
+            "value_type": 9,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 300,
+            "bit_address": 0,
+            "data_length": 2
+        },
+        {
+            "value_name": "终点位置",
+            "value_type": 9,
+            "area_char": "D",
+            "data_type": 1,
+            "start_address": 302,
+            "bit_address": 0,
+            "data_length": 2
+        },
+        {
+            "value_name": "张力值",
+            "value_type": 9,
+            "area_char": "W",
+            "data_type": 1,
+            "start_address": 80,
+            "bit_address": 0,
+            "data_length": 2
+        },
+        {
+            "value_name": "浮点型1",
+            "value_type": 8,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 100,
+            "bit_address": 0,
+            "data_length": 4
+        },
+        {
+            "value_name": "浮点型2",
+            "value_type": 8,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 104,
+            "bit_address": 0,
+            "data_length": 4
+        },
+        {
+            "value_name": "浮点型3",
+            "value_type": 8,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 108,
+            "bit_address": 0,
+            "data_length": 4
+        },
+        {
+            "value_name": "浮点型4",
+            "value_type": 8,
+            "area_char": "H",
+            "data_type": 1,
+            "start_address": 112,
+            "bit_address": 0,
+            "data_length": 4
+        }
+    ]
+}

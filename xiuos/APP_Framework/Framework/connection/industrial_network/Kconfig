@@ -1,0 +1,15 @@
+config CONNECTION_ADAPTER_ETHERCAT
+    bool "Using EtherCAT on industrial network adapter device"
+    default n
+
+    if CONNECTION_ADAPTER_ETHERCAT
+        source "$APP_DIR/Framework/connection/industrial_network/ethercat/Kconfig"
+    endif
+
+config CONNECTION_ADAPTER_POWERLINK
+    bool "Using POWERLINK on industrial network adapter device"
+    default n
+
+    if CONNECTION_ADAPTER_POWERLINK
+        source "$APP_DIR/Framework/connection/industrial_network/powerlink/Kconfig"
+    endif

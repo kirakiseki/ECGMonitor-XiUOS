@@ -1,0 +1,19 @@
+import os
+from building import * 
+Import('RTT_ROOT')
+Import('rtconfig')
+cwd = GetCurrentDir()
+DEPENDS = ["DRV_USING_SX1278"]
+
+SOURCES = []
+if GetDepend(['DRV_USING_SX1278']):
+    SOURCES += ['drv_sx1278.c']
+    SOURCES += Glob('src/radio/sx1276*.c')
+    SOURCES += Glob('src/radio/radio.c')
+    SOURCES += Glob('port/*.c')
+
+path =  [cwd + '/inc']
+path +=  ['src/radio']
+objs = DefineGroup('sx1278', src = SOURCES, depend = DEPENDS,CPPPATH = path) 
+
+Return("objs") 

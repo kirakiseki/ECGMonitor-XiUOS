@@ -1,0 +1,14 @@
+import os
+from building import * 
+Import('RTT_ROOT')
+Import('rtconfig')
+cwd = GetCurrentDir()
+DEPENDS = ["DRV_USING_HS300X"]
+
+SOURCES = []
+if GetDepend(['DRV_USING_HS300X']):
+    SOURCES += ['drv_hs300x.c']
+path =  [cwd]
+objs = DefineGroup('hs300x', src = SOURCES, depend = DEPENDS,CPPPATH = path) 
+
+Return("objs") 

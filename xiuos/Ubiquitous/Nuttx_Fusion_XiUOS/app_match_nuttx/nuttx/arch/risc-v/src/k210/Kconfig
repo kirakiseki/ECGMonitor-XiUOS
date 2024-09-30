@@ -1,0 +1,316 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+comment "K210 Configuration Options"
+
+menu "K210 Peripheral Support"
+
+# These "hidden" settings determine whether a peripheral option is available
+# for the selected MCU
+
+config K210_HAVE_UART0
+	bool
+	default y
+	select UART0_SERIALDRIVER
+	select ARCH_HAVE_SERIAL_TERMIOS
+
+# These are the peripheral selections proper
+
+config K210_UART0
+	bool "UART0"
+	default y
+	select ARCH_HAVE_UART0
+	select ARCH_HAVE_SERIAL_TERMIOS
+	select K210_UART
+
+config K210_HAVE_LCD
+	bool
+	default n
+
+config K210_LCD
+	bool "LCD"
+	default n
+	select K210_HAVE_LCD
+
+config K210_LCD_BACKLIGHT
+    bool "LCD BACKLIGHT"
+    default n
+
+endmenu
+
+menuconfig K210_UART
+  bool "K210 UART Chip support"
+  select ARCH_HAVE_SERIAL_TERMIOS
+  default n
+
+if K210_UART
+    config K210_SERIAL_DISABLE_REORDERING
+        bool "Disable reordering of ttySx devices."
+        default n
+        ---help---
+            NuttX per default reorders the serial ports (/dev/ttySx) so that the
+            console is always on /dev/ttyS0. If more than one UART is in use this
+            can, however, have the side-effect that all port mappings
+            (hardware USART1 -> /dev/ttyS0) change if the console is moved to another
+            UART.  This option disables that re-ordering for UARTs.
+
+    config K210_UART1
+        bool "K210 UART1"
+        default n
+
+    if K210_UART1
+
+    config K210_UART1_BASE
+        hex "K210 UART1 base address"
+        default 0x50210000
+
+    config K210_UART1_CLOCK
+        int "K210 UART1 clock"
+        default 195000000
+        
+
+    config K210_UART1_IRQ
+        int "K210 UART1 IRQ number"
+        default 38
+
+    config K210_UART1_BAUD
+        int "K210 UART1 BAUD"
+        default 115200
+
+    config K210_UART1_PARITY
+        int "K210 UART1 parity"
+        default 0
+        range 0 2
+        ---help---
+            K210 UART1 parity.  0=None, 1=Odd, 2=Even.  Default: None
+
+    config K210_UART1_BITS
+        int "K210 UART1 number of bits"
+        default 8
+        ---help---
+            K210 UART1 number of bits.  Default: 8
+
+    config K210_UART1_2STOP
+        int "K210 UART1 two stop bits"
+        default 0
+        ---help---
+            0=1 stop bit, 1=Two stop bits.  Default: 1 stop bit
+
+    config K210_UART1_RXBUFSIZE
+        int "K210 UART1 Rx buffer size"
+        default 256
+        ---help---
+            K210 UART1 Rx buffer size.  Default: 128
+
+    config K210_UART1_TXBUFSIZE
+        int "K210 UART1 Tx buffer size"
+        default 256
+        ---help---
+            K210 UART1 Tx buffer size.  Default: 128
+
+    config K210_UART1_IFLOWCONTROL
+        bool "K210 UART1 RTS flow control"
+        default n
+        select SERIAL_IFLOWCONTROL
+        ---help---
+            Enable K210 UART1 RTS flow control
+
+    config K210_UART1_OFLOWCONTROL
+        bool "K210 UART1 CTS flow control"
+        default n
+        select SERIAL_OFLOWCONTROL
+        ---help---
+            Enable K210 UART1 CTS flow control
+
+    endif # K210_UART1
+
+    config K210_UART2
+        bool "K210 UART2"
+        default n
+
+    if K210_UART2
+
+    config K210_UART2_BASE
+        hex "K210 UART2 base address"
+        default 0x50220000
+
+    config K210_UART2_CLOCK
+        int "K210 UART2 clock"
+        default 195000000
+
+    config K210_UART2_IRQ
+        int "K210 UART2 IRQ number"
+        default 39
+
+    config K210_UART2_BAUD
+        int "K210 UART2 BAUD"
+        default 115200
+
+    config K210_UART2_PARITY
+        int "K210 UART2 parity"
+        default 0
+        range 0 2
+        ---help---
+            K210 UART2 parity.  0=None, 1=Odd, 2=Even.  Default: None
+
+    config K210_UART2_BITS
+        int "K210 UART2 number of bits"
+        default 8
+        ---help---
+            K210 UART2 number of bits.  Default: 8
+
+    config K210_UART2_2STOP
+        int "K210 UART2 two stop bits"
+        default 0
+        ---help---
+            0=1 stop bit, 1=Two stop bits.  Default: 1 stop bit
+
+    config K210_UART2_RXBUFSIZE
+        int "K210 UART2 Rx buffer size"
+        default 256
+        ---help---
+            K210 UART2 Rx buffer size.  Default: 128
+
+    config K210_UART2_TXBUFSIZE
+        int "K210 UART2 Tx buffer size"
+        default 256
+        ---help---
+            K210 UART2 Tx buffer size.  Default: 128
+
+    config K210_UART2_IFLOWCONTROL
+        bool "K210 UART2 RTS flow control"
+        default n
+        select SERIAL_IFLOWCONTROL
+        ---help---
+            Enable K210 UART2 RTS flow control
+
+    config K210_UART2_OFLOWCONTROL
+        bool "K210 UART2 CTS flow control"
+        default n
+        select SERIAL_OFLOWCONTROL
+        ---help---
+            Enable K210 UART2 CTS flow control
+
+    endif # K210_UART2
+
+    config K210_UART3
+        bool "K210 UART3"
+        default n
+
+    if K210_UART3
+
+    config K210_UART3_BASE
+        hex "K210 UART3 base address"
+        default 0x50230000
+
+    config K210_UART3_CLOCK
+        int "K210 UART3 clock"
+        default 195000000
+
+    config K210_UART3_IRQ
+        int "K210 UART3 IRQ number"
+        default 40
+
+    config K210_UART3_BAUD
+        int "K210 UART3 BAUD"
+        default 115200
+
+    config K210_UART3_PARITY
+        int "K210 UART3 parity"
+        default 0
+        range 0 2
+        ---help---
+            K210 UART3 parity.  0=None, 1=Odd, 2=Even.  Default: None
+
+    config K210_UART3_BITS
+        int "K210 UART3 number of bits"
+        default 8
+        ---help---
+            K210 UART3 number of bits.  Default: 8
+
+    config K210_UART3_2STOP
+        int "K210 UART3 two stop bits"
+        default 0
+        ---help---
+            0=1 stop bit, 1=Two stop bits.  Default: 1 stop bit
+
+    config K210_UART3_RXBUFSIZE
+        int "K210 UART3 Rx buffer size"
+        default 256
+        ---help---
+            K210 UART3 Rx buffer size.  Default: 128
+
+    config K210_UART3_TXBUFSIZE
+        int "K210 UART3 Tx buffer size"
+        default 256
+        ---help---
+            K210 UART3 Tx buffer size.  Default: 128
+
+    config K210_UART3_IFLOWCONTROL
+        bool "K210 UART3 RTS flow control"
+        default n
+        select SERIAL_IFLOWCONTROL
+        ---help---
+            Enable K210 UART3 RTS flow control
+
+    config K210_UART3_OFLOWCONTROL
+        bool "K210 UART3 CTS flow control"
+        default n
+        select SERIAL_OFLOWCONTROL
+        ---help---
+            Enable K210 UART3 CTS flow control
+
+    endif # K210_UART3
+
+    config K210_UART_SUPRESS_CONFIG
+        bool "Suppress K210 configuration"
+        default n
+
+    config K210_UART_SUPRESS_INITIAL_CONFIG
+        bool "Suppress initial K210 configuration"
+        depends on !K210_UART_SUPRESS_CONFIG
+        default y
+        ---help---
+            This option is useful, for example, if you are using a bootloader
+            that configures the K210_UART.  In that case, you may want to
+            just leave the existing console configuration in place.  Default: n
+
+    config SERIAL_UART_ARCH_MMIO
+        bool "Platform access register through the memory mapping"
+        default y
+
+    config SERIAL_UART_ARCH_IOCTL
+        bool "Platform has own custom IOCTL"
+        default n
+
+    config K210_UART_REGINCR
+        int "Address increment between K210 registers"
+        default 4
+        ---help---
+            The address increment between K210 registers.  Options are 1, 2, or 4.
+            Default: 1
+
+    config K210_UART_REGWIDTH
+        int "Bit width of K210 registers"
+        default 32
+        ---help---
+            The bit width of registers.  Options are 8, 16, or 32. Default: 32
+
+    config K210_UART_ADDRWIDTH
+        int "Address width of K210 registers"
+        default 32
+        ---help---
+            The bit width of registers.  Options are 0, 8, 16, or 32.
+            Default: 32
+            Note: 0 means auto detect address size (uintptr_t)
+endif
+
+menu "K210 Others"
+
+config K210_WITH_QEMU
+	bool "qemu support"
+	default n
+
+endmenu

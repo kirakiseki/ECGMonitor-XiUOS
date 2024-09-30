@@ -1,0 +1,15 @@
+config CONTROL_PROTOCOL_MODBUS_TCP
+        bool "Using modbus_tcp control protocol"
+        default n
+        select CONTROL_USING_SOCKET
+if CONTROL_PROTOCOL_MODBUS_TCP
+        source "$APP_DIR/Framework/control/ipc_protocol/modbus_tcp/Kconfig"
+endif
+
+config CONTROL_PROTOCOL_MODBUS_UART
+        bool "Using modbus_uart control protocol"
+        default n
+        select CONTROL_USING_SERIAL_485
+if CONTROL_PROTOCOL_MODBUS_UART
+        source "$APP_DIR/Framework/control/ipc_protocol/modbus_uart/Kconfig"
+endif

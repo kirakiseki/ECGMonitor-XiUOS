@@ -1,0 +1,4 @@
+source "$KERNEL_DIR/services/drivers/Kconfig"
+source "$KERNEL_DIR/services/fs/Kconfig"
+source "$KERNEL_DIR/services/lib/Kconfig"
+

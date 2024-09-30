@@ -1,0 +1,50 @@
+menuconfig SUPPORT_CONTROL_FRAMEWORK
+    bool "support control framework"
+    default n
+    select TRANSFORM_LAYER_ATTRIUBUTE
+    select BSP_USING_SDIO
+    select MOUNT_SDCARD_FS
+    select LIB_USING_CJSON
+
+if SUPPORT_CONTROL_FRAMEWORK
+    config CONTROL_USING_SERIAL_485
+        bool
+        default n
+
+    config CONTROL_USING_SOCKET
+        bool
+        default n
+    if CONTROL_USING_SOCKET
+        choice
+            prompt "select socket lib"
+            default CONTROL_SOCKET_LWIP
+        
+            config CONTROL_SOCKET_LWIP
+                bool "support socket, using LwIP"
+                select BSP_USING_LWIP
+            
+            config CONTROL_SOCKET_W5500
+                bool "support socket, using W5500"
+                select BSP_USING_W5500
+        endchoice
+    endif
+
+    config CONTROL_RECIPE_FILE
+        string "control framework recipe file name"
+        default "test_recipe.json"
+
+    menuconfig CONTROL_IPC_PROTOCOL
+        bool "Using ipc protocol"
+        default n
+    if CONTROL_IPC_PROTOCOL
+        source "$APP_DIR/Framework/control/ipc_protocol/Kconfig"
+    endif
+
+    menuconfig CONTROL_PLC_PROTOCOL
+        bool "Using plc protocol"
+        default n
+    if CONTROL_PLC_PROTOCOL
+        source "$APP_DIR/Framework/control/plc_protocol/Kconfig"
+    endif
+    
+endif

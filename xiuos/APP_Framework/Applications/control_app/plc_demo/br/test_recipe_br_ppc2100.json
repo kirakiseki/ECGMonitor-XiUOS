@@ -1,0 +1,93 @@
+{
+    "device_id": 1,
+    "device_name": "BR_PPC2100",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.26",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.254.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 2000,
+  "read_item_list": [
+    {
+      "value_name": "motorrun",
+      "value_type": 1,
+      "function_code": 2,
+      "start_address": 0,
+      "quantity": 1
+    },
+    {
+      "value_name": "motorstop",
+      "value_type": 1,
+      "function_code": 2,
+      "start_address": 1,
+      "quantity": 1
+    },
+    {
+      "value_name": "valueopen",
+      "value_type": 1,
+      "function_code": 1,
+      "start_address": 100,
+      "quantity": 1
+    },
+    {
+      "value_name": "valueclose",
+      "value_type": 1,
+      "function_code": 1,
+      "start_address": 101,
+      "quantity": 1
+    },
+    {
+      "value_name": "step",
+      "value_type": 3,
+      "function_code": 4,
+      "start_address": 100,
+      "quantity": 1
+    },
+    {
+      "value_name": "temperature",
+      "value_type": 9,
+      "function_code": 4,
+      "start_address": 101,
+      "quantity": 2
+    },
+    {
+      "value_name": "status",
+      "value_type": 4,
+      "function_code": 4,
+      "start_address": 103,
+      "quantity": 2
+    },
+    {
+      "value_name": "mode",
+      "value_type": 3,
+      "function_code": 3,
+      "start_address": 200,
+      "quantity": 1
+    },
+    {
+      "value_name": "setTemperature",
+      "value_type": 9,
+      "function_code": 3,
+      "start_address": 201,
+      "quantity": 2
+    },
+    {
+      "value_name": "setConuter",
+      "value_type": 4,
+      "function_code": 3,
+      "start_address": 203,
+      "quantity": 2
+    },
+    {
+      "value_name": "LrealTest",
+      "value_type": 8,
+      "function_code": 3,
+      "start_address": 205,
+      "quantity": 4
+    }
+  ]
+}

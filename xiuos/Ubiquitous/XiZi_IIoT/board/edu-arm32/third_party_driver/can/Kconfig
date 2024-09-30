@@ -1,0 +1,15 @@
+config CAN_BUS_NAME_2
+    string "can bus name"
+    default "can2"
+
+config CAN_DRIVER_NAME_2
+    string "can driver name"
+    default "can2_drv"
+
+config CAN_2_DEVICE_NAME_1
+    string "can bus 1 device 1 name"
+    default "can2_dev1"
+
+config CAN_USING_INTERRUPT
+    bool "can interrupt open"
+    default n

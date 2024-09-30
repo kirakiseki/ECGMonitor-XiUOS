@@ -1,0 +1,25 @@
+config BSP_USING_HC32_USBH
+    bool "Using usb host by HC32 library"
+    default y
+    if BSP_USING_HC32_USBH
+        config USB_BUS_NAME
+            string "usb bus name"
+            default "usb"
+        config USB_DRIVER_NAME
+            string "usb bus driver name"
+            default "usb_drv"
+        config USB_DEVICE_NAME
+            string "usb bus device name"
+            default "usb_dev"
+        config MOUNT_USB_FS
+            bool "mount usb file system : if y then not support sdcard-mount-fs"
+            default y
+            select MOUNT_USB
+
+        if MOUNT_USB_FS
+            config MOUNT_USB_FS_TYPE
+                int "choose file system type : FATFS(0)"
+                default 0 
+        endif
+    endif
+

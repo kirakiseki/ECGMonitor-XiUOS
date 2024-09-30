@@ -1,0 +1,184 @@
+{
+    "device_id": 1,
+    "device_name": "OP01",
+	"communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.32",
+		"local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+		"netmask": "255.255.255.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "M19",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address": 19,
+            "quantity": 1
+        },
+        {
+            "value_name": "M20",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address":20,
+            "quantity": 1
+        },
+        {
+            "value_name": "D500",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 500,
+            "quantity": 1
+        },
+        {
+            "value_name": "D501",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 501,
+            "quantity": 1
+        },
+        {
+            "value_name": "D502",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 502,
+            "quantity": 1
+        },
+        {
+            "value_name": "D503",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 503,
+            "quantity": 1
+        },
+        {
+            "value_name": "D504",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 504,
+            "quantity": 1
+        },
+        {
+            "value_name": "M22",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address": 22,
+            "quantity": 1
+        },
+        {
+            "value_name": "D505",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 505,
+            "quantity": 1
+        },
+        {
+            "value_name": "D506",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 506,
+            "quantity": 1
+        },
+        {
+            "value_name": "D507",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 507,
+            "quantity": 1
+        },
+        {
+            "value_name": "D508",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 508,
+            "quantity": 1
+        },
+        {
+            "value_name": "D509",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 509,
+            "quantity": 1
+        },
+        {
+            "value_name": "D510",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 510,
+            "quantity": 1
+        },        
+        {
+            "value_name": "D511",
+            "value_type": 4,
+            "function_code": 6,
+            "start_address": 511,
+            "quantity": 1
+        },
+        {
+            "value_name": "M23",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address": 23,
+            "quantity": 1
+        },
+        {
+            "value_name": "M24",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address":24,
+            "quantity": 1
+        },
+        {
+            "value_name": "M25",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address": 25,
+            "quantity": 1
+        },
+       {
+            "value_name": "M26",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address": 26,
+            "quantity": 1
+        },
+       {
+            "value_name": "M29",
+            "value_type": 1,
+            "function_code": 5,
+            "start_address": 29,
+            "quantity": 1
+        },
+        {
+            "value_name": "D513",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 513,
+            "quantity": 1
+        },
+        {
+            "value_name": "D515",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 515,
+            "quantity": 1
+        },
+        {
+            "value_name": "M27",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":27,
+            "quantity": 1
+        },
+        {
+            "value_name": "M28",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":28,
+            "quantity": 1
+        }
+    ]
+}

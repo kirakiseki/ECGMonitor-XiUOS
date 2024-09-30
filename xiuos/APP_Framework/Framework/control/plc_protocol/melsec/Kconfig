@@ -1,0 +1,64 @@
+choice
+    prompt "select melsec protocol"
+    default CONTROL_PROTOCOL_MELSEC_1E
+
+    config CONTROL_PROTOCOL_MELSEC_1E
+        bool "support melsec_1e protocol, using SOCKET"
+        select CONTROL_USING_SOCKET
+    
+    config CONTROL_PROTOCOL_MELSEC_3E_Q_L
+        bool "support melsec_3e_q_l protocol, using SOCKET"
+        select CONTROL_USING_SOCKET
+
+    config CONTROL_PROTOCOL_MELSEC_3E_IQ_R
+        bool "support melsec_3e_iq_r protocol, using SOCKET"
+        select CONTROL_USING_SOCKET
+
+    config CONTROL_PROTOCOL_MELSEC_1C
+        bool "support melsec_1c protocol, using SERIAL"
+        select CONTROL_USING_SERIAL_485
+
+    config CONTROL_PROTOCOL_MELSEC_3C
+        bool "support melsec_3c protocol, using SERIAL"
+        select CONTROL_USING_SERIAL_485
+endchoice
+
+if CONTROL_USING_SERIAL_485
+    if ADD_XIZI_FEATURES
+            config CONTROL_FRAMEWORK_UART_485_DIR
+                    int "control framework 485 direction pin number"
+                    default "2"
+
+            config CONTROL_FRAMEWORK_PIN_DEV
+                    string "control framework device pin dev path"
+                    default "/dev/pin_dev"             
+
+            config CONTROL_FRAMEWORK_DRIVER_EXTUART
+                    bool "Using extra uart to control framework"
+                    default n
+
+            config CONTROL_FRAMEWORK_UART_DEV
+                    string "control framework device uart dev path"
+                    default "/dev/uart3_dev3"
+                    depends on !CONTROL_FRAMEWORK_DRIVER_EXTUART
+
+            if CONTROL_FRAMEWORK_DRIVER_EXTUART                    
+                    config CONTROL_FRAMEWORK_UART_DEV
+                            string "control framework device extra uart dev path"
+                            default "/dev/extuart_dev0"
+
+                    config CONTROL_FRAMEWORK_DEV_EXT_PORT
+                            int "if control framework device using extuart, choose port"
+                            default "0"
+            endif
+    endif
+
+    if ADD_NUTTX_FEATURES
+
+    endif
+
+    if ADD_RTTHREAD_FEATURES
+
+    endif
+
+endif

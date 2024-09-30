@@ -1,0 +1,23 @@
+config ADAPTER_LORA_SX1278
+        string "SX1278 adapter name"
+        default "sx1278"
+
+if ADD_XIZI_FEATURES
+        config ADAPTER_SX1278_DRIVER
+        string "SX1278 device spi driver path"
+        default "/dev/spi2_lora"
+endif
+
+if ADD_NUTTX_FEATURES
+        config ADAPTER_SX1278_DRIVER
+        string "SX1278 device spi driver path"
+        default "/dev/spi2_lora"
+
+endif
+
+if ADD_RTTHREAD_FEATURES
+        config ADAPTER_SX1278_DRIVER
+        string "SX1278 device spi driver path"
+        default "/dev/sx1278"
+
+endif

@@ -1,0 +1,48 @@
+menu "OTA function"
+
+    menuconfig TOOL_USING_OTA
+        bool "Enable support OTA function"
+        default n
+        
+    if TOOL_USING_OTA
+        choice 
+            prompt "Compile bootloader bin or application bin."
+            default MCUBOOT_BOOTLOADER
+
+            config MCUBOOT_BOOTLOADER
+                    bool "Config as bootloader."
+
+            config MCUBOOT_APPLICATION
+                    bool "Config as application."
+        endchoice
+
+
+        menu "Flash area address and size configuration."
+            config CHIP_FLAH_BASE
+                hex "Flash base address of the chip."
+                default 0x60000000
+
+            config XIUOS_FLAH_ADDRESS
+                hex "Flash area address of the XiUOS system."
+                default 0x60100000
+
+            config BAKUP_FLAH_ADDRESS
+                hex "Flash area address of the backup firmware."
+                default 0x60300000
+
+            config DOWN_FLAH_ADDRESS
+                hex "Flash area address of the downloaded firmware."
+                default 0x60500000
+
+            config FLAG_FLAH_ADDRESS
+                hex "Flash area address of the OTA information."
+                default 0x60700000
+
+            config APP_FLASH_SIZE
+                hex "Application package size,the default size is limited to 1M."
+                default 0x00100000
+        endmenu
+    
+    endif
+
+endmenu

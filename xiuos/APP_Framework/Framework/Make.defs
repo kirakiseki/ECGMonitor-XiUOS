@@ -1,0 +1,6 @@
+############################################################################
+# APP_Framework/Framework/Make.defs
+############################################################################
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Framework
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Framework/transform_layer/nuttx
+include $(wildcard $(APPDIR)/../../../APP_Framework/Framework/*/Make.defs)

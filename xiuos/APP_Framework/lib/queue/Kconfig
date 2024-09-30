@@ -1,0 +1,7 @@
+menu "lib using queue"
+
+    menuconfig LIB_USING_QUEUE
+        bool "USING QUEUE"
+        default n
+        
+endmenu

@@ -1,0 +1,43 @@
+menu "lib using LoRaWan"
+
+menuconfig LIB_USING_LORAWAN
+    bool "Using LoRaWan lib"
+    default n
+
+    if LIB_USING_LORAWAN
+        menuconfig LIB_USING_LORAWAN_GATEWAY_SC
+            help 
+                Please add "source "$APP_DIR/lib/lorawan/lorawan_gateway_single_channel/Kconfig"" when using lorawan_gateway_single_channel
+            bool "LoRaWan using lorawan_gateway for single channel(SX126x/SX127x) lib"
+            default n
+            select LIB_USING_LORA_RADIO
+            select BSP_USING_LWIP
+
+        if LIB_USING_LORAWAN_GATEWAY_SC
+            
+        endif
+
+        menuconfig LIB_USING_LORAWAN_ED_STACK
+            help 
+                Please add "source "$APP_DIR/lib/lorawan/lorawan_devicenode/Kconfig"" when using lorawan_devicenode
+            bool "LoRaWan using lorawan_ed_stack lib"
+            default n
+            select LIB_USING_LORA_RADIO
+
+        if LIB_USING_LORAWAN_ED_STACK
+
+        endif
+
+        menuconfig LIB_USING_LORA_RADIO
+            help
+                Please add "source "$APP_DIR/lib/lorawan/lora_radio_driver/Kconfig"" when using lora_radio_driver
+            bool "LoRaWan using lora-radio-driver lib"
+            default n
+            select BSP_USING_SPI
+
+        if LIB_USING_LORA_RADIO
+
+        endif
+    endif
+
+endmenu

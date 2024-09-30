@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_SX1278']):
+    src += ['sx1278.c']
+group = DefineGroup('connection lora sx1278', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

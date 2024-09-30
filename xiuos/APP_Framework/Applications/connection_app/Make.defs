@@ -1,0 +1,6 @@
+############################################################################
+# APP_Framework/Application/connection_app/Make.defs
+############################################################################
+ifneq ($(CONFIG_APPLICATION_CONNECTION),)
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Applications/connection_app/socket_demo
+endif

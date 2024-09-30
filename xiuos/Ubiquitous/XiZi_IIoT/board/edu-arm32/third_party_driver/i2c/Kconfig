@@ -1,0 +1,22 @@
+config I2C_BUS_NAME_1
+    string "i2c 1 bus name"
+    default "i2c1"
+config I2C_DRV_NAME_1
+    string "i2c bus 1 driver name"
+    default "i2c1_drv"
+config I2C_1_DEVICE_NAME_0
+    string "i2c bus 1 device 0 name"
+    default "i2c1_dev0"
+config I2C_DEVICE_MODE
+    bool "choose i2c device mode as master or slave"
+    default y
+    choice
+        prompt "choose i2c mode"
+        default I2C_DEVICE_MASTER
+
+        config I2C_DEVICE_MASTER
+            bool "set i2c master"
+        
+        config I2C_DEVICE_SLAVE
+            bool "set i2c slave"
+    endchoice

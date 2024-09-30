@@ -1,0 +1,34 @@
+config ADAPTER_LORA_E22
+        string "E22-400T30S adapter name"
+        default "e22"
+
+if ADD_NUTTX_FEATURES
+
+        config ADAPTER_E22_M0_PATH
+                string "E22 M0 pin device"
+                default "/dev/gpio0"
+
+        config ADAPTER_E22_M1_PATH
+                string "E22 M1 pin device"
+                default "/dev/gpio1"
+        
+        config ADAPTER_E22_DRIVER_EXTUART
+                bool "Using extra uart to support lora"
+                default n
+
+        config ADAPTER_E22_DRIVER
+                string "E22 device uart driver path"
+                default "/dev/ttyS2"
+                depends on !ADAPTER_E22_DRIVER_EXTUART
+
+        if ADAPTER_E22_DRIVER_EXTUART                    
+                config ADAPTER_E22_DRIVER
+                        string "E22 device extra uart driver path"
+                        default "/dev/extuart_dev3"
+
+                config ADAPTER_E22_DRIVER_EXT_PORT
+                        int "if E22 device using extuart, choose port"
+                        default "3"
+        endif
+
+endif

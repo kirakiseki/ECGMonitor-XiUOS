@@ -1,0 +1,3 @@
+menuconfig LIB_MUSLLIB
+bool "Enable Musllib "
+default y

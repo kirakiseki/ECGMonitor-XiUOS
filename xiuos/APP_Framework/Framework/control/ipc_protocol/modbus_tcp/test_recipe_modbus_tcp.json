@@ -1,0 +1,142 @@
+{
+    "device_id": 4,
+    "device_name": "GJ2",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.9",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.254.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "M0",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8192,
+            "quantity": 1
+        },
+        {
+            "value_name": "M1",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":8193,
+            "quantity": 1
+        },
+        {
+            "value_name": "M102",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8294,
+            "quantity": 1
+        },
+        {
+            "value_name": "M200",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8392,
+            "quantity": 1
+        },
+        {
+            "value_name": "M201",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":8393,
+            "quantity": 1
+        },
+        {
+            "value_name": "M202",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8394,
+            "quantity": 1
+        },
+        {
+            "value_name": "M203",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8395,
+            "quantity": 1
+        },
+        {
+            "value_name": "M204",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8396,
+            "quantity": 1
+        },
+        {
+            "value_name": "M205",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8397,
+            "quantity": 1
+        },
+        {
+            "value_name": "M206",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8398,
+            "quantity": 1
+        },
+        {
+            "value_name": "D20",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 20,
+            "quantity": 1
+        },
+        {
+            "value_name": "D21",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 21,
+            "quantity": 1
+        },
+        {
+            "value_name": "D22",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 22,
+            "quantity": 1
+        },
+        {
+            "value_name": "D23",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 23,
+            "quantity": 1
+        },
+        {
+            "value_name": "D202",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 202,
+            "quantity": 2
+        },
+        {
+            "value_name": "D204",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 204,
+            "quantity": 2
+        },
+        {
+            "value_name": "D206",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 206,
+            "quantity": 2
+        },
+        {
+            "value_name": "D208",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 208,
+            "quantity": 2
+        }
+    ]
+}

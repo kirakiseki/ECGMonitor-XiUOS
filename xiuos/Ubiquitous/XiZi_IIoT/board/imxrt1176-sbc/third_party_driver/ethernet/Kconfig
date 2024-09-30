@@ -1,0 +1,11 @@
+config BOARD_NETWORK_USE_100M_ENET_PORT
+    bool "Enable 100M Enet Port"
+    default y
+
+config BOARD_NETWORK_USE_1G_ENET_PORT
+    bool "Enable 1000M Enet Port"
+    default y
+
+config LWIP_REASSEMBLY_FRAG
+    bool
+    default y

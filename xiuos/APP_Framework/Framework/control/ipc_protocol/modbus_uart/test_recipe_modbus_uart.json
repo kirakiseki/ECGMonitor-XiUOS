@@ -1,0 +1,30 @@
+{
+    "device_id": 1,
+    "device_name": "GJ2",
+    "communication_type": 1,
+    "serial_config": {
+        "station": 1,
+        "baud_rate": 9600,
+        "data_bits": 8,
+        "stop_bits": 1,
+        "check_mode": 0
+    },
+    "protocol_type": 3,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "M0",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8192,
+            "quantity": 1
+        },
+        {
+            "value_name": "D208",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 208,
+            "quantity": 1
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+menu "More Drivers"
+
+source "$RT_Thread_DIR/app_match_rt-thread/rw007/Kconfig"
+source "$RT_Thread_DIR/app_match_rt-thread/ov2640/Kconfig"
+source "$RT_Thread_DIR/app_match_rt-thread/hs300x/Kconfig"
+source "$RT_Thread_DIR/app_match_rt-thread/sx1278/Kconfig"
+source "$RT_Thread_DIR/app_match_rt-thread/wiznet/Kconfig"
+endmenu

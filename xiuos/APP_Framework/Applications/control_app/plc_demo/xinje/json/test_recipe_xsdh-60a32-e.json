@@ -1,0 +1,93 @@
+{
+    "device_id": 255,
+    "device_name": "GJ2",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.45",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.255.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 100,
+    "read_item_list": [
+        {
+            "value_name": "QX40.0",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":0,
+            "quantity": 1
+        },
+        {
+            "value_name": "QX40.1",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 1,
+            "quantity": 1
+        },
+        {
+            "value_name": "QX40.2",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 2,
+            "quantity": 1
+        },
+        {
+            "value_name": "QX40.3",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":3,
+            "quantity": 1
+        },
+        {
+            "value_name": "QX40.4",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 4,
+            "quantity": 1
+        },
+        {
+            "value_name": "QW0",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 0,
+            "quantity": 2
+        },
+        {
+            "value_name": "QW1",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 1,
+            "quantity": 2
+        },
+        {
+            "value_name": "QW2",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 2,
+            "quantity": 2
+        },
+        {
+            "value_name": "QW3",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 3,
+            "quantity": 2
+        },
+        {
+            "value_name": "QW10",
+            "value_type": 3,
+            "function_code": 4,
+            "start_address": 0,
+            "quantity": 2
+        },
+        {
+            "value_name": "QW11",
+            "value_type": 3,
+            "function_code": 4,
+            "start_address": 1,
+            "quantity": 2
+        }
+    ]
+}

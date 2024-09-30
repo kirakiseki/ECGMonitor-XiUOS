@@ -1,0 +1,65 @@
+mainmenu "XiZi_IIoT Project Configuration"
+
+config BSP_DIR
+    string
+    option env="BSP_ROOT"
+    default "."
+
+config KERNEL_DIR
+    string
+    option env="KERNEL_ROOT"
+    default "../.."
+
+config BOARD_EDU_RISCV64_EVB
+    bool
+    select  ARCH_RISCV
+    select ARCH_RISCV64
+    select ARCH_CPU_64BIT
+    default y 
+
+source "$KERNEL_DIR/arch/Kconfig"
+
+menu "edu-riscv64 feature"
+    source "$BSP_DIR/third_party_driver/Kconfig"
+
+    menu "config default board resources"
+        menu "config board app name"
+            config BOARD_APP_NAME
+                string "config board app name"
+                default "/XiUOS_edu_riscv64_app.bin"
+        endmenu
+
+        menu "config board service table"
+            config SERVICE_TABLE_ADDRESS
+                hex "board service table address"
+                default 0x80100000
+        endmenu
+
+        menu "config board peripheral"
+            config MOUNT_SDCARD
+                bool "mount cd card"
+                default n
+            config MOUNT_USB
+                bool "mount usb"
+                default n
+        endmenu
+
+    endmenu
+
+    config __STACKSIZE__
+        int "stack size for interrupt"
+        default 4096
+
+endmenu
+
+
+
+
+
+menu "Hardware feature"
+source "$KERNEL_DIR/resources/Kconfig"
+endmenu
+
+source "$KERNEL_DIR/Kconfig"
+
+

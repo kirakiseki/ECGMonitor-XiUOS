@@ -1,0 +1,28 @@
+menu "Framework"
+
+    config TRANSFORM_LAYER_ATTRIUBUTE
+        bool "support transform layer"
+        default y
+        choice
+            prompt "select os features"
+            default ADD_XIZI_FEATURES
+
+            config ADD_XIZI_FEATURES
+                bool "add xizi features"
+            
+            config ADD_NUTTX_FEATURES
+                bool "add nuttx features"
+
+            config ADD_RTTHREAD_FEATURES
+                bool "add rt_thread features"
+        endchoice
+
+
+    source "$APP_DIR/Framework/sensor/Kconfig"
+    source "$APP_DIR/Framework/connection/Kconfig"
+    source "$APP_DIR/Framework/knowing/Kconfig"
+    source "$APP_DIR/Framework/control/Kconfig"
+    source "$APP_DIR/Framework/security/Kconfig"
+
+
+endmenu

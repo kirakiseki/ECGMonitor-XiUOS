@@ -1,0 +1,46 @@
+if BSP_USING_CAMERA
+    config DVP_XCLK_RATE
+        int "Camera interface clk rate"
+        default 24000000
+    config IMAGE_WIDTH
+        int "Camera photo width"
+        default 320
+    config IMAGE_HEIGHT
+        int "Camera photo height"
+        default 240        
+    config DVP_BURST_ENABLE
+        bool "brust mode enable"
+        default y
+    config DVP_AUTO_ENABLE
+        bool "auto recv image mode enable"
+        default n
+    config DVP_AI_OUTPUT
+        bool "ai output enable"
+        default n
+    config DVP_INTERRUPT_ENABLE
+        bool "interrupt enable"
+        default y                   
+
+    config CAMERA_BUS_NAME
+        string "camera bus name"
+        default "camera"
+    config CAMERA_DRV_NAME
+        string "camera driver name"
+        default "camera_drv"
+    config CAMERA_DEVICE_NAME
+        string "camera device name"
+        default "camera_dev"
+
+    choice 
+        prompt "set camera framesize and fps"
+        default SVGA_25FPS_MODE
+
+        config UXGA_15FPS_MODE
+        bool "using uxga in 15fps"
+
+        config SVGA_25FPS_MODE
+        bool "using svag in 25fps"
+    endchoice
+
+    
+endif

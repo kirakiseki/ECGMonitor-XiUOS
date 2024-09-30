@@ -1,0 +1,80 @@
+{
+     "device_id": 1,
+    "device_name": "INOVANCE_am401_RTU",
+    "communication_type": 1,
+    "serial_config": {
+        "station": 1,
+        "baud_rate": 9600,
+        "data_bits": 8,
+        "stop_bits": 1,
+        "check_mode":3
+    },
+    "protocol_type": 3,
+    "read_period": 2000,
+    "read_item_list": [
+        {
+            "value_name": "q00",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 0,
+            "quantity": 1
+        },
+        {
+            "value_name": "q01",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":1,
+            "quantity": 1
+        },
+        {
+            "value_name": "q10",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 8,
+            "quantity": 1
+        },
+        {
+            "value_name": "mw100",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 100,
+            "quantity": 1
+        },
+        {
+            "value_name": "mw101",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 101,
+            "quantity": 1
+        },
+        {
+            "value_name": "md200",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 400,
+            "quantity": 2
+        },
+        {
+            "value_name": "md201",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 402,
+            "quantity": 2
+        },
+        {
+            "value_name": "md300",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 600,
+            "quantity": 2
+        },
+        {
+            "value_name": "md301",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 602,
+            "quantity": 2
+        }
+        
+    ]
+}

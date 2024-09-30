@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_E220']):
+    src += ['e220.c']
+group = DefineGroup('connection lora e220', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

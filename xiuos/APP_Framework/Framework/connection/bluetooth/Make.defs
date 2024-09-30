@@ -1,0 +1,7 @@
+############################################################################
+# APP_Framework/Framework/connection/bluetooth/Make.defs
+############################################################################
+ifneq ($(CONFIG_CONNECTION_ADAPTER_BLUETOOTH),)
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Framework/connection/bluetooth
+endif
+include $(wildcard $(APPDIR)/../../../APP_Framework/Framework/connection/bluetooth/*/Make.defs)

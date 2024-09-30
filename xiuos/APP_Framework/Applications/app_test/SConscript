@@ -1,0 +1,11 @@
+import os
+from building import * 
+Import('RTT_ROOT')
+Import('rtconfig')
+cwd = GetCurrentDir()
+DEPENDS = [""]
+
+SOURCES = ['test_shell.c']
+path =  [cwd]
+objs = DefineGroup('app_test', src = SOURCES, depend = DEPENDS,CPPPATH = path) 
+Return("objs") 

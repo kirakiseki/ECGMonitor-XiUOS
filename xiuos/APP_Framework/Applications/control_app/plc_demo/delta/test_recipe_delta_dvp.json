@@ -1,0 +1,80 @@
+{
+    "device_id": 1,
+    "device_name": "DELTA_DVP",
+    "communication_type": 0,
+    "socket_config": {
+        "plc_ip": "192.168.250.27",
+        "local_ip": "192.168.250.233",
+        "gateway": "192.168.250.1",
+        "netmask": "255.255.254.0",
+        "port": 502
+    },
+    "protocol_type": 2,
+    "read_period": 2000,
+    "read_item_list": [
+        {
+            "value_name": "M20",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 2068,
+            "quantity": 1
+        },
+        {
+            "value_name": "M100",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address":2148,
+            "quantity": 1
+        },
+        {
+            "value_name": "Y10",
+            "value_type": 1,
+            "function_code": 1,
+            "start_address": 1288,
+            "quantity": 1
+        },
+        {
+            "value_name": "D200",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address":4296,
+            "quantity": 1
+        },
+        {
+            "value_name": "D201",
+            "value_type": 3,
+            "function_code": 3,
+            "start_address": 4297,
+            "quantity": 1
+        },
+        {
+            "value_name": "D220",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 4316,
+            "quantity": 2
+        },
+        {
+            "value_name": "D222",
+            "value_type": 4,
+            "function_code": 3,
+            "start_address": 4318,
+            "quantity": 2
+        },
+        {
+            "value_name": "D300",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 4396,
+            "quantity": 2
+        },
+        {
+            "value_name": "D302",
+            "value_type": 9,
+            "function_code": 3,
+            "start_address": 4398,
+            "quantity": 2
+        }
+        
+    ]
+}

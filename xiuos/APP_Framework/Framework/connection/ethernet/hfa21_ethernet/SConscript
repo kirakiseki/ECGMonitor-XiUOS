@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_HFA21_ETHERNET']):
+    src += ['hfa21_ethernet.c']
+group = DefineGroup('connection ethernet hfa21', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

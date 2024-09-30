@@ -1,0 +1,61 @@
+if BSP_USING_SPI
+    config BSP_USING_SPI1
+    bool "Using spi1"
+    default y
+
+    if BSP_USING_SPI1
+        config SPI_BUS_NAME_1
+            string "spi bus 1 name"
+            default "spi1"
+        config SPI_1_DEVICE_NAME_0
+            string "spi bus 1 device 0 name"
+            default "spi1_dev0" 
+        config SPI_1_DRV_NAME
+            string "spi bus 1 driver name"
+            default "spi1_drv"
+
+        menuconfig RESOURCES_SPI_LORA
+            bool "Using spi lora function"
+            default n
+            if RESOURCES_SPI_LORA
+                config SX12XX_DEVICE_NAME
+                string "SX12XX(SX1278 SX1276) lora device name"
+                default "spi1_lora"
+            endif
+    endif   
+
+    config BSP_USING_SPI6
+    bool "Using spi6"
+    default n
+
+    if BSP_USING_SPI6
+        config SPI_BUS_NAME_6
+            string "spi bus 6 name"
+            default "spi6"
+        config SPI_6_DEVICE_NAME_0
+            string "spi bus 6 device 0 name"
+            default "spi6_dev0" 
+        config SPI_6_DRV_NAME
+            string "spi bus 6 driver name"
+            default "spi6_drv"
+    endif  
+
+    config BSP_USING_QSPI_FLASH
+    bool "Using qspi and flash"
+    default n
+
+    if BSP_USING_QSPI_FLASH
+        config QSPI_BUS_NAME
+            string "qspi bus name"
+            default "qspi"
+        config QSPI_DEVICE_NAME_0
+            string "qspi bus device 0 name"
+            default "qspi_dev0" 
+        config QSPI_DRV_NAME
+            string "qspi bus driver name"
+            default "qspi_drv"
+        config QSPI_FLASH_DEV_NAME
+            string "flash dev name"
+            default "qspi_W25Q128"        
+    endif  
+endif

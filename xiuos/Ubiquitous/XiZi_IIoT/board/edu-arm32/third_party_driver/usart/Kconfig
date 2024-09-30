@@ -1,0 +1,29 @@
+menuconfig BSP_USING_UART3
+    bool "Enable USART3"
+    default y
+    if BSP_USING_UART3
+        config SERIAL_BUS_NAME_3
+            string "serial bus 3 name"
+            default "usart3"
+        config SERIAL_DRV_NAME_3
+            string "serial bus 3 driver name"
+            default "usart3_drv"
+        config SERIAL_3_DEVICE_NAME_0
+            string "serial bus 3 device 0 name"
+            default "usart3_dev3"   
+    endif
+
+menuconfig BSP_USING_UART6
+    bool "Enable USART6"
+    default n
+    if BSP_USING_UART6
+        config SERIAL_BUS_NAME_6
+            string "serial bus 6 name"
+            default "usart6"
+        config SERIAL_DRV_NAME_6
+            string "serial bus 6 driver name"
+            default "usart6_drv"
+        config SERIAL_6_DEVICE_NAME_0
+            string "serial bus 6 device 0 name"
+            default "usart6_dev6"   
+    endif

@@ -1,0 +1,38 @@
+
+menuconfig DRV_USING_SX1278
+	bool "sx1278 driver"
+	default n
+	help 
+	note:
+		lora connection
+
+if DRV_USING_SX1278
+	config SX1278_SPI_DEVICE_NAME
+		string "SX1278 Lora Device Spi Name"
+		default "spi20"
+	config SX1278_DEVICE_NAME
+		string "SX1278 Lora Device Name"
+		default "spi2_lora"
+	config SX1278_DEVICE_RST_PIN
+		int 
+		default 1
+	config SX1278_DEVICE_DIO0_PIN
+		int
+		default 1
+	config SX1278_DEVICE_DIO1_PIN
+		int
+		default 1
+	config SX1278_DEVICE_DIO2_PIN
+		int
+		default 1
+	config SX1278_DEVICE_DIO3_PIN
+		int
+		default 1
+	config SX1278_DEVICE_DIO4_PIN
+		int
+		default 1
+	config SX1278_DEVICE_DIO5_PIN
+		int
+		default 1
+endif
+

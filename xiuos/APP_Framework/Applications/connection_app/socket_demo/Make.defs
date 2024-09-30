@@ -1,0 +1,7 @@
+############################################################################
+# APP_Framework/Application/connection_app/socket_demo/Make.defs
+############################################################################
+ifneq ($(CONFIG_SOCKET_DEMO),)
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Applications/connection_app/socket_demo/*/Make.defs
+include $(wildcard $(APPDIR)/../../../APP_Framework/Applications/connection_app/socket_demo/*/Make.defs)
+endif

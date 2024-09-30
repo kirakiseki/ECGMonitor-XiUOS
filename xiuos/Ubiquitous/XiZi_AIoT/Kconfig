@@ -1,0 +1,6 @@
+
+source "$KERNEL_DIR/services/Kconfig"
+source "$KERNEL_DIR/softkernel/Kconfig"
+source "$KERNEL_DIR/support/Kconfig"
+source "$KERNEL_DIR/testing/Kconfig"
+

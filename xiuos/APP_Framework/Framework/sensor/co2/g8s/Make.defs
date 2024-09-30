@@ -1,0 +1,6 @@
+############################################################################
+# APP_Framework/Framework/sensor/co2/g8s/Make.defs
+############################################################################
+ifneq ($(CONFIG_SENSOR_G8S),)
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Framework/sensor/co2/g8s
+endif

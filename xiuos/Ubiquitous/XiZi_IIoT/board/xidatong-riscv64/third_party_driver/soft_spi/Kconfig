@@ -1,0 +1,43 @@
+if BSP_USING_SOFT_SPI
+        config SOFT_SPI_BUS_NAME
+            string "soft spi bus 1 name"
+            default "soft_spi1_bus1"
+        
+        config SOFT_SPI_DEVICE_NAME
+            string "soft spi dev 1 name"
+            default "soft_spi1_dev1" 
+
+        config SOFT_SPI_DRV_NAME
+            string "soft spi drv 1 name"
+            default "soft_spi1_drv1"
+
+        config SOFT_SPI_SCK
+            int "soft spi sck pin"
+            default 26
+
+        config  SOFT_SPI_MOSI
+            int "soft spi mosi pin"
+            default 27
+
+        config  SOFT_SPI_MISO
+            int "soft spi miso pin"
+            default 25
+
+        config SOFT_SPI_CS0_PIN
+            int "soft spi cs pin"
+            default 28
+
+        config SOFT_SPI_DEVICE_SLAVE_ID
+            int "soft spi slave id"
+            default 0
+        
+        config SOFT_SPI_CHIP_SELECT
+            int "soft spi chip selected"
+            default 0
+
+        config SOFT_SPI_CLK_DELAY
+            int "clk in microsecond"
+            default 0
+        
+endif
+

@@ -1,0 +1,18 @@
+#
+# For a description of the syntax of this configuration file,
+# see misc/tools/kconfig-language.txt.
+#
+
+if ARCH_BOARD_EDU_RISCV64
+
+menuconfig BSP_USING_CH376
+    bool "Using CH376 device"
+    default n
+    select K210_UART
+    select K210_UART3
+
+menuconfig BSP_USING_ENET
+    bool "Using ENET device"
+    default n
+
+endif # ARCH_BOARD_EDU_RISCV64

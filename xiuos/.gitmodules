@@ -1,0 +1,34 @@
+[submodule "Ubiquitous/RT-Thread_Fusion_XiUOS/rt-thread"]
+	path = Ubiquitous/RT-Thread_Fusion_XiUOS/rt-thread
+	url = https://www.gitlink.org.cn/chunyexixiaoyu/rt-thread.git
+[submodule "Ubiquitous/RT-Thread_Fusion_XiUOS/aiit_board/k210/kendryte-sdk/kendryte-sdk-source"]
+	path = Ubiquitous/RT-Thread_Fusion_XiUOS/aiit_board/k210/kendryte-sdk/kendryte-sdk-source
+	url = https://www.gitlink.org.cn/chunyexixiaoyu/kendryte-sdk-source.git
+[submodule "Ubiquitous/RT-Thread_Fusion_XiUOS/aiit_board/aiit-riscv64-board/kendryte-sdk/kendryte-sdk-source"]
+	path = Ubiquitous/RT-Thread_Fusion_XiUOS/aiit_board/aiit-riscv64-board/kendryte-sdk/kendryte-sdk-source
+	url = https://www.gitlink.org.cn/chunyexixiaoyu/kendryte-sdk-source.git
+[submodule "Ubiquitous/XiZi/fs/lwext4/lwext4_submodule"]
+	path = Ubiquitous/XiZi/fs/lwext4/lwext4_submodule
+	url = https://gitlink.org.cn/xuos/lwext4_filesystem_support_XiUOS.git
+[submodule "Ubiquitous/Nuttx_Fusion_XiUOS/nuttx"]
+	path = Ubiquitous/Nuttx_Fusion_XiUOS/nuttx
+	url = https://www.gitlink.org.cn/wgzAIIT/incubator-nuttx.git
+[submodule "Ubiquitous/Nuttx_Fusion_XiUOS/apps"]
+	path = Ubiquitous/Nuttx_Fusion_XiUOS/apps
+	url = https://www.gitlink.org.cn/wgzAIIT/incubator-nuttx-apps.git
+[submodule "APP_Framework/Applications/webnet/WebNet_XiUOS"]
+	path = APP_Framework/Applications/webnet/WebNet_XiUOS
+	url = https://gitlink.org.cn/xuos/WebNet_XiUOS.git
+[submodule "Ubiquitous/RT-Thread_Fusion_XiUOS/aiit_board/xidatong-riscv64/kendryte-sdk/kendryte-sdk-source"]
+	path = Ubiquitous/RT-Thread_Fusion_XiUOS/aiit_board/xidatong-riscv64/kendryte-sdk/kendryte-sdk-source
+	url = https://www.gitlink.org.cn/chunyexixiaoyu/kendryte-sdk-source.git
+[submodule "APP_Framework/lib/lorawan/lora_radio_driver"]
+	path = APP_Framework/lib/lorawan/lora_radio_driver
+	url = https://gitlink.org.cn/IACU/lora_radio_driver.git
+[submodule "APP_Framework/lib/lorawan/lorawan_devicenode"]
+	path = APP_Framework/lib/lorawan/lorawan_devicenode
+	url = https://gitlink.org.cn/IACU/lorawan_devicenode.git
+	branch = master
+[submodule "APP_Framework/lib/lorawan/lorawan_gateway_single_channel"]
+	path = APP_Framework/lib/lorawan/lorawan_gateway_single_channel
+	url = https://gitlink.org.cn/IACU/lorawan_gateway_single_channel.git

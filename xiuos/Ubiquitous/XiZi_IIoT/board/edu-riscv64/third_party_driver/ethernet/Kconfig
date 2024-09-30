@@ -1,0 +1,17 @@
+# Kconfig file
+
+config BSP_USING_W5500
+    bool "Using w5500"
+    default y
+
+config BSP_WIZ_RST_PIN
+    int 
+    default 13
+
+config BSP_WIZ_INT_PIN
+    int 
+    default 14
+
+config BSP_WIZ_USE_IPERF
+    bool "Using iperf"
+    default y

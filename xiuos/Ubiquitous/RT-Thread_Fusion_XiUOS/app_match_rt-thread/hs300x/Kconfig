@@ -1,0 +1,23 @@
+
+menuconfig DRV_USING_HS300X
+	bool "hs300x driver"
+	default n
+	help 
+	note:
+		hs300x can read Temperature and Humidity
+
+if DRV_USING_HS300X
+	config SENSOR_DEVICE_HS300X
+			string "HS300x sensor name"
+			default "HS300x"
+	config HS300X_DEV_ADDRESS
+			hex "hs300x device i2c address"
+			default 0x22
+	config HS300X_TEMP_RANGE_MAX
+			int "max temperature"
+			default 80
+	config HS300X_TEMP_RANGE_MIN
+			int "min temperature"
+			default -10
+endif
+

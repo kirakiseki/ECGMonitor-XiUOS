@@ -1,0 +1,37 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+if ARCH_BOARD_HC32F4A0
+
+config HC32F4A0_BOARD
+	bool "HDSC HC32F4A0 base board"
+	default n
+	---help---
+		Select if you are using the HC32F4A0 base board with the HC32F4A0.
+
+config HC32_ROMFS
+	bool "Automount baked-in ROMFS image"
+	default n
+	depends on FS_ROMFS
+	---help---
+		Select HC32_ROMFS_IMAGEFILE, HC32_ROMFS_DEV_MINOR, HC32_ROMFS_MOUNTPOINT
+
+config HC32_ROMFS_DEV_MINOR
+	int "Minor for the block device backing the data"
+	depends on HC32_ROMFS
+	default 64
+
+config HC32_ROMFS_MOUNTPOINT
+	string "Mountpoint of the custom romfs image"
+	depends on HC32_ROMFS
+	default "/rom"
+
+config HC32_ROMFS_IMAGEFILE
+	string "ROMFS image file to include into build"
+	depends on HC32_ROMFS
+	default "../../../../../rom.img"
+
+
+endif

@@ -1,0 +1,14 @@
+menuconfig BSP_USING_UART1
+    bool "Enable UART1"
+    default y
+    if BSP_USING_UART1
+        config SERIAL_BUS_NAME_1
+            string "serial bus  name"
+            default "uart1"
+        config SERIAL_DRV_NAME_1
+            string "serial bus  driver name"
+            default "uart1_drv"
+        config SERIAL_1_DEVICE_NAME_0
+                string "serial bus  device name"
+                default "uart1_dev1"   
+    endif

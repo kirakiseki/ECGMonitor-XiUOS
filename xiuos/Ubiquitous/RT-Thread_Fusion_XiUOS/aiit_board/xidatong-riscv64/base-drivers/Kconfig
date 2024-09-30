@@ -1,0 +1,224 @@
+menu "Board Drivers Config"
+    
+menu "On-chip Peripheral Drivers"
+    config __STACKSIZE__
+        int "stack size for interrupt"
+        default 4096
+    config BSP_USING_UART_HS
+        bool "Enable High Speed UART"
+        default n
+    menuconfig BSP_USING_UART1
+        bool "Enable UART1"
+        default n
+        if BSP_USING_UART1
+            config BSP_UART1_TXD_PIN
+                int "uart1 TXD pin number"
+                default 19
+            config BSP_UART1_RXD_PIN
+                int "uart1 RXD pin number"
+                default 18
+            config BSP_UART1_RTS_PIN
+                int "uart1 RTS pin number (-1 for not used)"
+                default -1
+            config BSP_UART1_CTS_PIN
+                int "uart1 CTS pin number (-1 for not used)"
+                default -1            
+        endif
+    menuconfig BSP_USING_UART2
+        bool "Enable UART2"
+        default n
+        if BSP_USING_UART2
+            config BSP_UART2_TXD_PIN
+                int "uart2 TXD pin number"
+                default 20
+            config BSP_UART2_RXD_PIN
+                int "uart2 RXD pin number"
+                default 21
+            config BSP_UART2_RTS_PIN
+                int "uart2 RTS pin number (-1 for not used)"
+                default -1
+            config BSP_UART2_CTS_PIN
+                int "uart2 CTS pin number (-1 for not used)"
+                default -1               
+        endif
+    menuconfig BSP_USING_UART3
+        bool "Enable UART3"
+        default n
+        if BSP_USING_UART3
+            config BSP_UART3_TXD_PIN
+                int "uart3 TXD pin number"
+                default 22
+            config BSP_UART3_RXD_PIN
+                int "uart3 RXD pin number"
+                default 23
+            config BSP_UART3_RTS_PIN
+                int "uart3 RTS pin number (-1 for not used)"
+                default -1
+            config BSP_UART3_CTS_PIN
+                int "uart3 CTS pin number (-1 for not used)"
+                default -1               
+        endif
+
+    menuconfig BSP_USING_I2C1
+        bool "Enable  I2C1"
+        select RT_USING_I2C
+        default n
+        if BSP_USING_I2C11
+            config BSP_I2C1_SDA_PIN
+                int "I2C1 sda pin number"
+                default 15
+            config BSP_I2C1_CLK_PIN
+                int "I2C1 clk pin number"
+                default 17
+        endif
+
+    menuconfig BSP_USING_SPI1
+        bool "Enable SPI1"
+        select RT_USING_SPI
+        default n
+        if BSP_USING_SPI1
+            config BSP_SPI1_CLK_PIN
+                int "spi1 clk pin number"
+                default 9
+            config BSP_SPI1_D0_PIN
+                int "spi1 d0 pin number"
+                default 11
+            config BSP_SPI1_D1_PIN
+                int "spi1 d1 pin number"
+                default 10
+            menuconfig BSP_SPI1_USING_SS0
+                bool "SPI1 Enable SS0(spi10 dev)"
+                default n
+            if BSP_SPI1_USING_SS0
+                config BSP_SPI1_SS0_PIN
+                    int "spi1 ss0 pin number"
+                    default 12
+            endif
+            menuconfig BSP_SPI1_USING_SS1
+                bool "SPI1 Enable SS1(spi11 dev)"
+                default n
+            if BSP_SPI1_USING_SS1
+                config BSP_SPI1_SS1_PIN
+                    int "spi1 ss1 pin number"
+                    default 8
+            endif
+            menuconfig BSP_SPI1_USING_SS2
+                bool "SPI1 Enable SS2(spi12 dev)"
+                default n
+            if BSP_SPI1_USING_SS2
+                config BSP_SPI1_SS2_PIN
+                    int "spi1 ss2 pin number"
+                    default 26
+            endif
+            menuconfig BSP_SPI1_USING_SS3
+                bool "SPI1 Enable SS3(spi13 dev)"
+                default n
+            if BSP_SPI1_USING_SS3
+                config BSP_SPI1_SS3_PIN
+                    int "spi1 ss3 pin number"
+                    default 27
+            endif
+        endif
+endmenu
+
+menu "Onboard Peripheral Drivers"
+    menuconfig BSP_USING_LCD
+    bool "Enable LCD on SPI0"
+    default n
+    if BSP_USING_LCD
+        config BSP_LCD_CS_PIN
+            int "CS pin number of 8080 interface"
+            default 41
+        config BSP_LCD_WR_PIN
+            int "WR pin number of 8080 interface"
+            default 38
+        config BSP_LCD_DC_PIN
+            int "DC pin number of 8080 interface"
+            default 39
+        config BSP_LCD_RST_PIN
+            int "RESET pin number of 8080 interface (-1 for not used)"
+            default 37
+        config BSP_LCD_BACKLIGHT_PIN
+            int "Backlight control pin number (-1 for not used)"
+            default -1
+        choice
+            prompt "backlight active polarity"
+            default BSP_LCD_BACKLIGHT_ACTIVE_LOW
+            
+            config BSP_LCD_BACKLIGHT_ACTIVE_LOW
+                bool "lcd backlight on low level"
+            config BSP_LCD_BACKLIGHT_ACTIVE_HIGH
+                bool "lcd_backlight on high level"
+        endchoice
+
+        config BSP_LCD_CLK_FREQ
+            int "Lcd max clk frequency"
+            default 15000000
+        
+        choice
+            prompt "lcd scan direction"
+            default BSP_BOARD_KD233
+
+            config  BSP_BOARD_KD233
+                bool "board_kd233 lcd scan: DIR_YX_RLUD"
+
+            config  BSP_BOARD_K210_OPENMV_TEST
+                bool "board_k210_openmv lcd scan: DIR_YX_LRUD"
+
+            config  BSP_BOARD_USER
+                bool "board_user: user defined."    
+        endchoice
+
+        config BSP_LCD_X_MAX
+            int "LCD Height"
+            default 272
+        config BSP_LCD_Y_MAX
+            int "LCD Width"
+            default 480
+    endif
+    menuconfig BSP_USING_CH438
+    bool "Enable CH438"
+    default y
+        if BSP_USING_CH438
+        config BSP_CH438_ALE_PIN
+            int "ale pin number for ch438"
+            default 24
+        config BSP_CH438_NWR_PIN
+            int "nwr pin number for ch438"
+            default 25
+        config BSP_CH438_NRD_PIN
+            int "nrd pin number for ch438"
+            default 26
+        config BSP_CH438_D0_PIN
+            int "d0 pin number for ch438"
+            default 27
+        config BSP_CH438_D1_PIN
+            int "d1 pin number for ch438"
+            default 28
+        config BSP_CH438_D2_PIN
+            int "d2 pin number for ch438"
+            default 29
+        config BSP_CH438_D3_PIN
+            int "d3 pin number for ch438"
+            default 30
+        config BSP_CH438_D4_PIN
+            int "d4 pin number for ch438"
+            default 31
+        config BSP_CH438_D5_PIN
+            int "d5 pin number for ch438"
+            default 32
+        config BSP_CH438_D6_PIN
+            int "d6 pin number for ch438"
+            default 33
+        config BSP_CH438_D7_PIN
+            int "d7 pin number for ch438"
+            default 34
+        config BSP_CH438_INT_PIN
+            int "int pin number for ch438"
+            default 35
+        endif
+    
+
+endmenu
+
+endmenu

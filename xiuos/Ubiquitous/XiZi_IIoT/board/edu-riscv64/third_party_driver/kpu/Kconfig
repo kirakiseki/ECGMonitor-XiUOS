@@ -1,0 +1,15 @@
+if BSP_USING_KPU
+    config KPU_DMA_CH
+        int "KPU DMA channel number"
+        default 5  
+
+    config KPU_BUS_NAME
+        string "kpu bus name"
+        default "kpu"
+    config KPU_DRV_NAME
+        string "kpu driver name"
+        default "kpu_drv"
+    config KPU_DEVICE_NAME
+        string "kpu device name"
+        default "kpu_dev"
+endif

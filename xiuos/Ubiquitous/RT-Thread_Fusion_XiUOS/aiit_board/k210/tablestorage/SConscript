@@ -1,0 +1,26 @@
+from building import *
+
+# get current directory
+cwd     = GetCurrentDir()
+
+# the set of source files associated with this SConscript file.
+src     = Glob('src/common/*.cc')
+src    += Glob('src/execution/*.cc')
+src    += Glob('src/storage/*.cc')
+
+# compile optional modules
+if GetDepend(['TABLE_STORAGE_CACHE']):
+    src += ['src/modules/prefetcher.cc']
+if GetDepend(['TABLE_STORAGE_CACHE']):
+    src += ['src/modules/queryCache.cc']
+if GetDepend(['TABLE_STORAGE_CACHE']):
+    src += ['src/modules/buffer.cc']
+if GetDepend(['TABLE_STORAGE_CACHE']):
+    src += ['src/modules/secondIndex.cc']
+
+# include path
+path    = [cwd + '/include']
+
+group = DefineGroup('TableStorage', src, depend = ['TABLE_STORAGE'], CPPPATH = path)
+
+Return('group')

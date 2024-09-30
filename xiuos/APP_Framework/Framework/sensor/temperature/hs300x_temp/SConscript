@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['SENSOR_HS300X_TEMPERATURE']):
+    src += ['hs300x_temp.c']
+group = DefineGroup('sensor temperature hs300x', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

@@ -1,0 +1,16 @@
+config ADAPTER_WIFI_ESP8285
+        string "ESP8285 WIFI adapter name"
+        default "esp8285_wifi"
+
+if ADD_NUTTX_FEATURES
+        config ADAPTER_ESP8285_DRIVER
+                string "ESP8285 device uart driver path"
+                default "/dev/ttyS1"
+endif
+
+if ADD_XIZI_FEATURES
+        config ADAPTER_ESP8285_DRIVER
+                string "ESP8285 device uart driver path"
+                default "/dev/uart1_dev1"
+endif
+

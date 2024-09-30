@@ -1,0 +1,18 @@
+SRC_FILES := ch32v30x_adc.c \
+	ch32v30x_bkp.c \
+	ch32v30x_can.c \
+	ch32v30x_dac.c ch32v30x_dbgmcu.c ch32v30x_dma.c ch32v30x_dvp.c \
+	ch32v30x_eth.c ch32v30x_exti.c \
+	ch32v30x_flash.c ch32v30x_fsmc.c \
+	ch32v30x_gpio.c \
+	ch32v30x_i2c.c ch32v30x_iwdg.c \
+	ch32v30x_misc.c \
+	ch32v30x_opa.c \
+	ch32v30x_pwr.c \
+	ch32v30x_rcc.c ch32v30x_rng.c ch32v30x_rtc.c \
+	ch32v30x_sdio.c ch32v30x_spi.c \
+	ch32v30x_tim.c \
+	ch32v30x_usart.c \
+	ch32v30x_wwdg.c 
+
+include $(KERNEL_ROOT)/compiler.mk

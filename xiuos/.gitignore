@@ -1,0 +1,5 @@
+*.vscode
+*.o
+*libmusl.a
+*liblwip.a
+.DS_Store

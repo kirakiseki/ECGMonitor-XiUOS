@@ -1,0 +1,6 @@
+menu LIB_NEWLIB
+    bool "Enable Newlib "
+    default y
+endmenu
+
+

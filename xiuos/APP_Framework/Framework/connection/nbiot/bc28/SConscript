@@ -1,0 +1,10 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+if GetDepend(['ADAPTER_BC28']):
+    src += ['bc28.c']
+group = DefineGroup('connection nb bc28', src, depend = [], CPPPATH = [cwd])
+
+Return('group')

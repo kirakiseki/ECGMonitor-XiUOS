@@ -1,0 +1,36 @@
+menu "TableStorage"
+
+    config TABLE_STORAGE
+    bool "Using Table storage system"
+    default n
+
+if TABLE_STORAGE
+    
+    config TABLE_STORAGE_BASIC
+    bool "Enable TableStorage Basic"
+    default y
+
+    config TABLE_STORAGE_QUERY
+    bool "[System-level] Enable TableStorage Buffer"
+    default n
+
+    config TABLE_STORAGE_CACHE
+    bool "[System-level] Enable TableStorage Prefetcher"
+    default n
+
+    config TABLE_STORAGE_PREFETCH
+    bool "[Table-level] Enable TableStorage Query Cache"
+    default n
+
+    config TABLE_STORAGE_SECOND_INDEX
+    bool "[Table-level] Enable TableStorage Second Index"
+    default n
+
+    config TABLE_STORAGE_TRANSACTION
+    bool "(Other) Enable TableStorage Transaction"
+    default n
+
+    
+endif
+
+endmenu

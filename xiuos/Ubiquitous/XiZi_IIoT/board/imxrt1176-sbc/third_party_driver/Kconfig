@@ -1,0 +1,25 @@
+menuconfig BSP_USING_LPUART
+    bool "Using UART device"
+    default y
+    select RESOURCES_SERIAL
+    if BSP_USING_LPUART
+        source "$BSP_DIR/third_party_driver/uart/Kconfig"
+    endif
+
+menuconfig BSP_USING_GPIO
+    bool "Using GPIO device "
+    default y
+    select RESOURCES_PIN
+
+    if BSP_USING_GPIO
+        source "$BSP_DIR/third_party_driver/gpio/Kconfig"
+    endif
+
+menuconfig BSP_USING_LWIP
+    bool "Using LwIP device"
+    default n
+    select RESOURCES_LWIP
+
+    if BSP_USING_LWIP
+        source "$BSP_DIR/third_party_driver/ethernet/Kconfig"
+    endif

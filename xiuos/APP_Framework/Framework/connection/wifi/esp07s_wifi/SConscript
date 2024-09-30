@@ -1,0 +1,12 @@
+from building import *      
+import os
+
+cwd = GetCurrentDir()       
+src = []                    
+if GetDepend(['ADAPTER_ESP07S_WIFI']):   
+    src += ['esp07s_wifi.c']
+
+group = DefineGroup('connection wifi esp07s', src, depend = [], CPPPATH = [cwd])
+
+
+Return('group')

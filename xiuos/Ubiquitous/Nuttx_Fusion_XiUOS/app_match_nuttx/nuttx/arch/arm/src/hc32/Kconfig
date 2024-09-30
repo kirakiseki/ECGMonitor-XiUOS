@@ -1,0 +1,214 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+comment "HC32 Configuration Options"
+
+choice
+	prompt "HC32 Chip Selection"
+	default HC32F4A0_CHIP
+
+config HC32F4A0_CHIP
+	bool "HC32F4A0"
+	---help---
+
+endchoice
+
+
+menu "HC32 U[S]ART Selection"
+
+config HC32_UART1
+	bool "UART1"
+	default n
+    select UART_SERIALDRIVER
+    select UART1_SERIALDRIVER
+	select HC32_UART1_SERIALDRIVER
+	select ARCH_HAVE_SERIAL_TERMIOS
+	select HC32_UART
+
+config HC32_UART2
+	bool "UART2"
+	default n
+	select HC32_UART2_SERIALDRIVER
+    select UART_SERIALDRIVER
+    select UART2_SERIALDRIVER
+	select ARCH_HAVE_SERIAL_TERMIOS
+	select HC32_UART
+
+config HC32_UART3
+	bool "UART3"
+	default n
+	select ARCH_HAVE_SERIAL_TERMIOS
+    select UART_SERIALDRIVER
+    select UART3_SERIALDRIVER
+	select HC32_UART3_SERIALDRIVER
+	select HC32_UART
+
+config HC32_UART4
+	bool "UART4"
+	default n
+	select ARCH_HAVE_SERIAL_TERMIOS
+    select UART_SERIALDRIVER
+    select UART4_SERIALDRIVER
+	select HC32_UART4_SERIALDRIVER
+	select HC32_UART
+
+config HC32_UART5
+	bool "UART5"
+	default n
+	select ARCH_HAVE_SERIAL_TERMIOS
+    select UART_SERIALDRIVER
+    select UART5_SERIALDRIVER
+	select HC32_UART5_SERIALDRIVER
+	select HC32_UART
+
+config HC32_UART6
+	bool "UART6"
+	default n
+	select ARCH_HAVE_SERIAL_TERMIOS
+    select UART_SERIALDRIVER
+    select UART6_SERIALDRIVER
+	select HC32_UART6_SERIALDRIVER
+	select HC32_UART
+
+config HC32_UART6_SERIALDRIVER
+    bool "UART6SERIAL"
+	default n
+
+if HC32_UART6
+
+menu "UART6 Configuration"
+	depends on UART6_SERIALDRIVER
+
+config UART6_RXBUFSIZE
+	int "Receive buffer size"
+	default 256
+	---help---
+		Characters are buffered as they are received. This specifies
+		the size of the receive buffer.
+
+config UART6_TXBUFSIZE
+	int "Transmit buffer size"
+	default 256
+	---help---
+		Characters are buffered before being sent.  This specifies
+		the size of the transmit buffer.
+
+config UART6_BAUD
+	int "BAUD rate"
+	default 115200
+	---help---
+		The configured BAUD of the UART.
+
+config UART6_BITS
+	int "Character size"
+	default 8
+	---help---
+		The number of bits.  Must be either 7 or 8.
+
+config UART6_PARITY
+	int "Parity setting"
+	range 0 2
+	default 0
+	---help---
+		0=no parity, 1=odd parity, 2=even parity
+
+config UART6_2STOP
+	int "use 2 stop bits"
+	default 0
+	---help---
+		1=Two stop bits
+
+config UART6_IFLOWCONTROL
+	bool "UART6 RTS flow control"
+	default n
+	select SERIAL_IFLOWCONTROL
+	---help---
+		Enable UART6 RTS flow control
+
+config UART6_OFLOWCONTROL
+	bool "UART6 CTS flow control"
+	default n
+	select SERIAL_OFLOWCONTROL
+	---help---
+		Enable UART6 CTS flow control
+
+config UART6_RXDMA
+	bool "UART6 Rx DMA support"
+	default n
+	select SERIAL_RXDMA
+	---help---
+		Enable Rx DMA transfers on UART6
+
+config UART6_TXDMA
+	bool "UART6 Tx DMA support"
+	default n
+	select SERIAL_TXDMA
+	---help---
+		Enable Tx DMA transfers on UART6
+
+endmenu
+
+endif
+
+config HC32_UART7
+	bool "UART7"
+	default n
+	select ARCH_HAVE_SERIAL_TERMIOS
+    select UART_SERIALDRIVER
+    select UART7_SERIALDRIVER
+	select HC32_UART7_SERIALDRIVER
+	select HC32_UART
+
+config HC32_UART8
+	bool "UART8"
+	default n
+	select ARCH_HAVE_SERIAL_TERMIOS
+    select UART_SERIALDRIVER
+    select UART8_SERIALDRIVER
+	select HC32_UART8_SERIALDRIVER
+	select HC32_UART
+
+endmenu # HC32 U[S]ART Selection
+
+config HC32_SPI1
+	bool "SPI1"
+	default n
+	select SPI
+	select HC32_SPI
+
+config HC32_SPI2
+	bool "SPI2"
+	default n
+	select SPI
+	select HC32_SPI
+
+config HC32_I2C1
+	bool "I2C1"
+	default n
+	select I2C
+	select HC32_I2C
+
+config HC32_I2C2
+	bool "I2C2"
+	default n
+	select I2C
+	select HC32_I2C
+
+config HC32_I2C3
+	bool "I2C3"
+	default n
+	select I2C
+	select HC32_I2C
+
+
+config HC32_SPI
+	bool
+
+config HC32_I2C
+	bool
+
+config HC32_CAN
+	bool
+
