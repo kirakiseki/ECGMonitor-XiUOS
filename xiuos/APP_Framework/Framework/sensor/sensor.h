@@ -67,6 +67,7 @@ extern "C" {
 #define SENSOR_ABILITY_C2H5OH           ((uint32_t)(1 << SENSOR_QUANTITY_C2H5OH))
 #define SENSOR_ABILITY_AQS              ((uint32_t)(1 << SENSOR_QUANTITY_AQS))
 #define SENSOR_ABILITY_PM1              ((uint32_t)(1 << SENSOR_QUANTITY_PM1))
+#define SENSOR_ABILITY_ADC              ((uint32_t)(1 << SENSOR_QUANTITY_ADC))
 
 struct SensorProductInfo {
     uint32_t ability;           /* Bitwise OR of sensor ability */
@@ -121,6 +122,7 @@ enum SensorQuantityType {
     SENSOR_QUANTITY_C2H5OH,
     SENSOR_QUANTITY_AQS,
     SENSOR_QUANTITY_PM1,
+    SENSOR_QUANTITY_ADC,
     /* ...... */
     SENSIR_QUANTITY_INTEGRATION,
     SENSOR_QUANTITY_END,

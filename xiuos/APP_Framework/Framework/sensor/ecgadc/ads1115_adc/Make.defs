@@ -1,0 +1,6 @@
+############################################################################
+# APP_Framework/Framework/sensor/ecgadc/ads1115_adc/Make.defs
+############################################################################
+ifneq ($(CONFIG_SENSOR_ADS1115_ADC),)
+CONFIGURED_APPS += $(APPDIR)/../../../APP_Framework/Framework/sensor/ecgadc/ads1115_adc
+endif

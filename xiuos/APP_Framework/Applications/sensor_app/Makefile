@@ -127,6 +127,10 @@ ifeq ($(CONFIG_ADD_XIZI_FEATURES),y)
         SRC_FILES += altitude_bmp180.c
     endif
 
+    ifeq ($(CONFIG_APPLICATION_SENSOR_ECGADC_ADS1115), y)
+        SRC_FILES += ecgadc_ads1115.c
+    endif
+
     include $(KERNEL_ROOT)/compiler.mk
 
 endif

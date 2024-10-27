@@ -87,4 +87,11 @@ if SUPPORT_SENSOR_FRAMEWORK
         if SENSOR_ALTITUDE
         source "$APP_DIR/Framework/sensor/altitude/Kconfig"
         endif
+
+        menuconfig SENSOR_ECGADC
+                bool "Using ECG-ADC device"
+                default n
+        if SENSOR_ECGADC
+        source "$APP_DIR/Framework/sensor/ecgadc/Kconfig"
+        endif
 endif

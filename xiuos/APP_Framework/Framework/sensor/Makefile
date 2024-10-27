@@ -63,5 +63,9 @@ ifeq ($(CONFIG_ADD_XIZI_FEATURES),y)
         SRC_DIR += altitude
     endif
 
+    ifeq ($(CONFIG_SENSOR_ECGADC),y)
+        SRC_DIR += ecgadc
+    endif
+
     include $(KERNEL_ROOT)/compiler.mk
 endif

@@ -47,6 +47,7 @@ ifeq ($(CONFIG_ADD_XIZI_FEATURES),y)
 
     ifeq ($(CONFIG_USER_TEST_I2C),y)
         SRC_FILES += test_i2c.c
+        SRC_FILES += test_i2c_adc.c
     endif
 
     ifeq ($(CONFIG_USER_TEST_GPIO),y)

@@ -1,0 +1,45 @@
+
+config SENSOR_ADS1115_ADC
+        bool "Using ADS1115 for ECG-ADC"
+        default n
+
+        if SENSOR_ADS1115_ADC
+                config SENSOR_DEVICE_ADS1115
+                        string "ADS1115 sensor name"
+                        default "ADS1115_1"
+                
+                config SENSOR_QUANTITY_ADS1115_ECGADC
+                        string "ADS1115 quantity name"
+                        default "adc_1"
+                
+                if ADD_XIZI_FEATURES
+                        config SENSOR_DEVICE_ADS1115_DEV
+                                string "ADS1115 device name"
+                                default "/dev/i2c1_dev0"
+                                
+                        config SENSOR_DEVICE_ADS1115_I2C_ADDR
+                                hex "ADS1115 device i2c address"
+                                default 0x48
+                endif
+
+                if ADD_NUTTX_FEATURES
+                        config SENSOR_DEVICE_ADS1115_DEV
+                                string "ADS1115 device name"
+                                default "/dev/i2c1_dev0"
+                        
+                        config SENSOR_DEVICE_ADS1115_I2C_ADDR
+                                hex "ADS1115 device i2c address"
+                                default 0x48
+
+                endif
+
+                if ADD_RTTHREAD_FEATURES
+                        config SENSOR_DEVICE_ADS1115_DEV
+                                string "ADS1115 device name"
+                                default "/dev/i2c1"
+                       config SENSOR_DEVICE_ADS1115_I2C_ADDR
+                                hex "ADS1115 device i2c address"
+                                default 0x48
+
+                endif
+        endif

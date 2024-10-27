@@ -28,6 +28,7 @@ extern int AdapterLoraInit(void);
 
 extern int D124VoiceInit(void);
 extern int Hs300xTemperatureInit(void);
+extern int ADS1115ECGADCInit(void);
 extern int Hs300xHumidityInit(void);
 extern int Ps5308Pm1_0Init(void);
 extern int Ps5308Pm2_5Init(void);
@@ -93,6 +94,12 @@ static struct InitDesc sensor_desc[] =
 #endif
 #ifdef SENSOR_QUANTITY_HS300X_HUMIDITY
 	{ "hs300x_humidity", Hs300xHumidityInit },
+#endif
+#endif
+
+#ifdef SENSOR_DEVICE_ADS1115
+#ifdef SENSOR_QUANTITY_ADS1115_ECGADC
+	{ "ads1115_ecgadc", ADS1115ECGADCInit },
 #endif
 #endif
 

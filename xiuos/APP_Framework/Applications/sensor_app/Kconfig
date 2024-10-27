@@ -156,6 +156,17 @@ menu "sensor app"
                     bool "Using sensor BMP180 apps"
                     default n
                 endif
+
+            menuconfig APPLICATION_SENSOR_ECGADC
+                bool "Using sensor ECGADC apps"
+                default n
+
+                if APPLICATION_SENSOR_ECGADC
+                    config APPLICATION_SENSOR_ECGADC_ADS1115
+                    bool "Using sensor ADS1115 apps"
+                    default n
+                endif
+
         endif
 
 endmenu
